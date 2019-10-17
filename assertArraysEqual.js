@@ -7,14 +7,11 @@ const assertEqual = function(actual, expected) {
     console.log(`${sadEmoji} Assertion Failed: ${actual} !== ${expected}`);
   }
 };
-// I'm going to loop through one array and in doing so will be able to find out the index and value of the array and then I will have to compare that with the arr2. Get arr[0] and compare it to arr2[0]. Move on to arr[1] and compare it with arr2[1]. 
 
 const eqArrays = function(arr, arrTwo) {
-
   if (arr.length !== arrTwo.length) {
     return false;
   }
-  
   for (let i = 0; i < arr.length; i ++) {
     if (arr[i] !== arrTwo[i]) {
       return false;
@@ -24,12 +21,18 @@ const eqArrays = function(arr, arrTwo) {
 }
 
 
-const a123 = [1, 2, 3];
-const a123again = [1, 2, 3];
-const a124 = [1, 2, 4];
+// use eqArrays function to compare the two arrays in this function. 
+const assertArraysEqual = function (arr, arr2) {
+  const happyEmoji = String.fromCodePoint(128512);
+  const sadEmoji = String.fromCodePoint(128530);
 
-console.log(eqArrays(a123, a124));
-assertEqual(eqArrays(a123, a123), true);
-assertEqual(eqArrays(a123, a123again), true);
+  if (eqArrays(arr, arr2)) {
+    console.log(`${happyEmoji} Assertion Passed: ${arr} === ${arr2}`);
+  } else {
+    console.log(`${sadEmoji} Assertion Failed: ${arr} !== ${arr2}`);
+  }
+  
+}
 
-
+console.log(assertArraysEqual([1,2,3], [1,2,3]));
+console.log(assertArraysEqual([1,2,3], [1,2,4]));
