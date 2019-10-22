@@ -4,9 +4,9 @@ const middle = require('./middle');
 const eqArrays = require('./eqArrays');
 
 module.exports = {
-  head:   head,
-  tail:   tail,
-  middle: middle,
-  eqArrays: eqArrays
+  head,
+  tail,
+  middle,
+  eqArrays
 };
 
