@@ -1,25 +1,25 @@
-const assertEqual = function(actual, expected) {
-  const happyEmoji = String.fromCodePoint(128512);
-  const sadEmoji = String.fromCodePoint(128530);
-  if (actual === expected) {
-    console.log(`${happyEmoji} Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`${sadEmoji} Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-const eqArrays = function(arr, arrTwo) {
+// const assertEqual = function(actual, expected) {
+//   const happyEmoji = String.fromCodePoint(128512);
+//   const sadEmoji = String.fromCodePoint(128530);
+//   if (actual === expected) {
+//     console.log(`${happyEmoji} Assertion Passed: ${actual} === ${expected}`);
+//   } else {
+//     console.log(`${sadEmoji} Assertion Failed: ${actual} !== ${expected}`);
+//   }
+// };
+// const eqArrays = function(arr, arrTwo) {
 
-  if (arr.length !== arrTwo.length) {
-    return false;
-  }
+//   if (arr.length !== arrTwo.length) {
+//     return false;
+//   }
   
-  for (let i = 0; i < arr.length; i ++) {
-    if (arr[i] !== arrTwo[i]) {
-      return false;
-    }
-  }
-  return true;
-}
+//   for (let i = 0; i < arr.length; i ++) {
+//     if (arr[i] !== arrTwo[i]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
 // Test the length of object1 against object2. If they are the same length, then is passes. If not, return false. 
 
 
@@ -50,6 +50,8 @@ const eqObjects = function(obj1, obj2) {
   }
   return true;
 }
+
+module.exports = eqObjects;
 
 const bb = { a: "22", c: "1"};
 const aa = { a: "2", b: "1"};

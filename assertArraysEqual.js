@@ -22,6 +22,7 @@
 
 const eqArrays = require('./eqArrays');
 // use eqArrays function to compare the two arrays in this function. 
+
 const assertArraysEqual = function (arr, arr2, expected) {
   const happyEmoji = String.fromCodePoint(128512);
   const sadEmoji = String.fromCodePoint(128530);

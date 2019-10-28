@@ -1,17 +1,6 @@
-const assertEqual = function(actual, expected) {
-  const happyEmoji = String.fromCodePoint(128512);
-  const sadEmoji = String.fromCodePoint(128530);
-  if (actual === expected) {
-    console.log(`${happyEmoji} Assertion Passed: [actual] === [expected]`);
-  } else {
-    console.log(`${sadEmoji} Assertion Failed: [actual] !== [expected]`);
-  }
-};
-
 const countLetters = function (str) {
   let result = {};
   let noSpace = str.split(' ').join("");
-  console.log("This is after the split join:", noSpace)
   
   for (const letter of noSpace) {
     
@@ -25,5 +14,7 @@ const countLetters = function (str) {
   }
   return result;
 }
-console.log(countLetters("lighthouse in the house"));
+
+module.exports = countLetters;
+
 
